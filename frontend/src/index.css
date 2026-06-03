@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 21% 8%;
+    --foreground: 225 23% 90%;
+    --card: 213 14% 13%;
+    --card-foreground: 225 23% 90%;
+    --primary: 220 100% 84%;
+    --primary-foreground: 214 100% 20%;
+    --muted: 216 12% 18%;
+    --muted-foreground: 217 10% 60%;
+    --accent: 39 73% 48%;
+    --accent-foreground: 220 26% 8%;
+    --destructive: 6 100% 84%;
+    --destructive-foreground: 356 100% 21%;
+    --border: 215 11% 24%;
+    --input: 215 11% 24%;
+    --ring: 220 100% 84%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01" on, "cv01" on;
+  }
+
+  .katex {
+    color: hsl(var(--foreground));
+  }
+
+  .math-mono {
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  }
+}
